@@ -13,7 +13,18 @@
 
 </head>
 <body>
-  <h1>🚴🏼‍♀️ Bikewatching</h1>
+  <header>
+    <h1>🚴🏼‍♀️ Bike</h1>
+    <label> Filter by time of day
+      <input type="range" min="-1" max="1439" id="time-slider" value="-1"/>
+    </label>
+    <div>
+      <time id="selected-time">11:59 PM</time>
+      <em id="any-time">(any time)</em>
+    </div>
+  </header>
+  <!-- Load D3.js from CDN -->
+  <script src="https://d3js.org/d3.v7.min.js"></script>
 
   <!-- Mapbox GL JS JavaScript -->
   <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
@@ -21,6 +32,8 @@
   <!-- Load your custom map initialization script -->
   <script type="module" src="map.js"></script>
 
-  <div id="map"></div>
+  <div id="map">
+    <svg></svg>
+  </div>
 </body>
 </html>
